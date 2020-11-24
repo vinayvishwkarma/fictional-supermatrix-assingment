@@ -54,14 +54,14 @@ public class SupermetricsSocialNetworkClient {
 				HttpRequest request = HttpRequest.newBuilder().POST(HttpRequest.BodyPublishers.ofString(json))
 						.uri(URI.create(REGISTER_TOKEN_URL)).header("Content-Type", "application/json").build();
 
-<<<<<<< HEAD
+
 				HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-=======
+
 			HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 			
 			/*testing if old token is expired and need to register new token 
 			System.out.println("registering new token ");*/
->>>>>>> 56c8ce100951602787e014d0ff67f52e68e891a4
+
 
 				if (response.statusCode() != 200) {
 					throw new RuntimeException("Failed to process the request. Status code: " + response.statusCode());
@@ -74,9 +74,7 @@ public class SupermetricsSocialNetworkClient {
 		} catch (IOException | InterruptedException | ParseException e) {
 			e.printStackTrace();
 		}
-<<<<<<< HEAD
 
-=======
 		
 		/*testing purpose printing the logs if token is valid
 		else {
@@ -84,7 +82,7 @@ public class SupermetricsSocialNetworkClient {
 
 		}*/
 		
->>>>>>> 56c8ce100951602787e014d0ff67f52e68e891a4
+
 		return slToken;
 	}
 
@@ -225,17 +223,7 @@ public class SupermetricsSocialNetworkClient {
 			e.printStackTrace();
 		}
 
-<<<<<<< HEAD
 		if (response.statusCode() == 200) {
-=======
-		/*JSONObject responseData = (JSONObject) parser.parse(response.body());
-		JSONObject error = (JSONObject) responseData.get("error");
-		String message= (String) error.get("message");
-		
-		System.out.println(" checking token isValidateToken");*/
-		
-		if (response.statusCode() != 500) {
->>>>>>> 56c8ce100951602787e014d0ff67f52e68e891a4
 			isValid = true;
 		}
 
