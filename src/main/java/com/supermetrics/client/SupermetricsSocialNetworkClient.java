@@ -58,10 +58,6 @@ public class SupermetricsSocialNetworkClient {
 				HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
 			HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-			
-			/*testing if old token is expired and need to register new token 
-			System.out.println("registering new token ");*/
-
 
 				if (response.statusCode() != 200) {
 					throw new RuntimeException("Failed to process the request. Status code: " + response.statusCode());
@@ -74,14 +70,6 @@ public class SupermetricsSocialNetworkClient {
 		} catch (IOException | InterruptedException | ParseException e) {
 			e.printStackTrace();
 		}
-
-		
-		/*testing purpose printing the logs if token is valid
-		else {
-			System.out.println(" old token is working fine ");
-
-		}*/
-		
 
 		return slToken;
 	}
