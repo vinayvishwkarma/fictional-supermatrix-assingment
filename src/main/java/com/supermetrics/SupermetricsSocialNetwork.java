@@ -24,11 +24,7 @@ public class SupermetricsSocialNetwork {
 
 		ProcessUserPostDataService processUserPostDataService = new ProcessUserPostDataServiceImpl();
 		processUserPostDataService.getUserPostsStatsAndGenerateJSONOutput(userPosts);
-<<<<<<< HEAD
-=======
-		/*echoing if the app ran successfully
-		System.out.println("data processing done! check the output file JSONOutput.txt");*/
->>>>>>> 56c8ce100951602787e014d0ff67f52e68e891a4
+
 
 	}
 
